@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="shortcut icon" href="HomeImages/favicon.png">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="https://kit.fontawesome.com/507911540e.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="footer.css">
+	<link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/album/">
+	<link rel="stylesheet" type="text/css" href="review.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<title>Review</title>
+
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+		.hero {
+			min-height: 100vh;
+		}
+
+		i {
+			color: #dc2751;
+			font-size: 2em;
+			text-align: center;
+		}
+
+		span.num {
+			color: #ffffff;
+			display: grid;
+			place-items: center;
+			font-weight: 600;
+			font-size: 1em;
+		}
+
+		span.text {
+			color: #dc2751;
+			font-size: 1em;
+			text-align: center;
+			pad: 0.7em 0;
+			font-weight: 400;
+			line-height: 0;
+			margin-top: 8px;
+		}
+
+		/* NAVIGATION BAR */
+
+		.items-color:visited {
+			color: #ffffff;
+		}
+
+		.navbar-nav .active {
+			color: red;
+		}
+
+		.btnoutline {
+			background-color: #dc2751;
+
+		}
+
+		.btnoutline:hover {
+			background-color: #f0f0f0;
+
+		}
+
+
+		.items-color {
+			color: #f0f0f0;
+		}
+
+		.items-color:hover {
+			color: #dc2751;
+		}
+
+		.text-color {
+			color: #f0f0f0;
+		}
+
+		.navbar-toggler {
+			border: 2px solid #f0f0f0;
+		}
+
+		.logo {
+			max-width: 100px;
+			margin-left: 20px;
+		}
+
+		.marginmenu {
+			margin-left: 80px;
+		}
+
+		.menu1 {
+			margin-left: 25px;
+		}
+
+		.btnmargin {
+			margin-left: 250px;
+		}
+
+		.bd-placeholder-img {
+			font-size: 1.125rem;
+			text-anchor: middle;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			user-select: none;
+		}
+
+
+		.b-example-divider {
+			width: 100%;
+			height: 3rem;
+			background-color: rgba(0, 0, 0, .1);
+			border: solid rgba(0, 0, 0, .15);
+			border-width: 1px 0;
+			box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+		}
+
+		.b-example-vr {
+			flex-shrink: 0;
+			width: 1.5rem;
+			height: 100vh;
+		}
+
+		.bi {
+			vertical-align: -.125em;
+			fill: currentColor;
+		}
+
+		.nav-scroller {
+			position: relative;
+			z-index: 2;
+			height: 2.75rem;
+			overflow-y: hidden;
+		}
+
+		.nav-scroller .nav {
+			display: flex;
+			flex-wrap: nowrap;
+			padding-bottom: 1rem;
+			margin-top: -1px;
+			overflow-x: auto;
+			text-align: center;
+			white-space: nowrap;
+			-webkit-overflow-scrolling: touch;
+		}
+	</style>
+
+</head>
+
+<body>
+	<!-- NAVIGATION BAR -->
+	<nav class="navbar bg-black navbar-expand-lg" data-bs-theme="dark">
+		<div class="container-fluid">
+			<a href="index.html"><img src="Homeimages/logo.png" id="logo" class="logo"></a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+				data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<i class="fa-solid fa-bars" style="color: #f0f0f0;"></i>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mx-auto mb-2 mb-lg-0 ">
+					<li class="nav-item">
+						<a class="nav-link items-color fw-semibold" href="index.html">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link items-color fw-semibold" href="about.html">About</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link items-color fw-semibold" href="contact.html">Contact Us</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link items-color fw-semibold" href="gallery.html">Gallery</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link items-color fw-semibold" href="review.html">Reviews</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link items-color fw-semibold" href="faq.html">F.A.Q's</a>
+					  </li>
+				</ul>
+
+				<!-- VISITOR COUNTER -->
+				<form class="d-flex">
+					<div class="me-3 text-center">
+						<i class="fa-solid fa-person fa-fade" style="color: #dc2751;"></i>
+						<span class="num" data-val="250">250</span>
+						<span class="text">Visitors</span>
+					</div>
+					<div class="my-3">
+						<a href="login.html" class="btn btn-outline-danger" style="height: 40px;">Login</a>
+					  </div>
+				</form>
+			</div>
+		</div>
+	</nav>
+
+	<!-- REVIEW -->
+	<div class="hero">
+		<div class="testimonials-section" style="padding-top: 100px;">
+			<header class="section-header">
+				<h1>What Clients Say</h1>
+			</header>
+			<div class="owl-carousel owl-theme testimonials-container">
+				<div class="item testimonial-card">
+					<main class="test-card-body">
+						<div class="quote">
+							<i class="fa fa-quote-left"></i>
+							<h2>Sound Blast</h2>
+						</div>
+						<p style="text-align: justify;">Just wanted to drop a quick note to say how much I love your music platform! The sleek
+							design, killer playlists, and artist info make it a go-to for my music fix. Kudos on
+							creating a user-friendly space for music lovers. Keep the beats coming!</p>
+						<div class="ratings">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+						</div>
+					</main>
+					<div class="profile">
+						<div class="profile-image">
+							<img src="ReviewImages/image1.jpg">
+						</div>
+						<div class="profile-desc">
+							<span>Oliver</span>
+							<span>Listner</span>
+						</div>
+					</div>
+				</div>
+				<div class="item testimonial-card">
+					<main class="test-card-body">
+						<div class="quote">
+							<i class="fa fa-quote-left"></i>
+							<h2>Sound Blast</h2>
+						</div>
+						<p style="text-align: justify;">Your music site rocks! Super easy to navigate, killer playlists, and all the artist info I
+							need. It's my go-to for good vibes. Thanks for the beats!</p>
+						<div class="ratings">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+						</div>
+					</main>
+					<div class="profile">
+						<div class="profile-image">
+							<img src="ReviewImages/image2.jpg">
+						</div>
+						<div class="profile-desc">
+							<span>Amelia</span>
+							<span>Listner</span>
+						</div>
+					</div>
+				</div>
+				<div class="item testimonial-card">
+					<main class="test-card-body">
+						<div class="quote">
+							<i class="fa fa-quote-left"></i>
+							<h2>Sound Blast</h2>
+						</div>
+						<p style="text-align: justify;">Your site is a gem! Seamless navigation, awesome playlists, and all the artist info at my
+							fingertips. Thanks for the musical joy!</p>
+						<div class="ratings">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+						</div>
+					</main>
+					<div class="profile">
+						<div class="profile-image">
+							<img src="ReviewImages/image3.jpg">
+						</div>
+						<div class="profile-desc">
+							<span>Ethan</span>
+							<span>Listner</span>
+						</div>
+					</div>
+				</div>
+				<div class="item testimonial-card">
+					<main class="test-card-body">
+						<div class="quote">
+							<i class="fa fa-quote-left"></i>
+							<h2>Sound Blast</h2>
+						</div>
+						<p style="text-align: justify;">Your music site is my happy place! Effortless navigation, killer playlists, and everything I
+							need to dive into my favorite artists. Thanks for the beats that keep me going!</p>
+						<div class="ratings">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+						</div>
+					</main>
+					<div class="profile">
+						<div class="profile-image">
+							<img src="ReviewImages/image4.jpg">
+						</div>
+						<div class="profile-desc">
+							<span>Mia</span>
+							<span>Listner</span>
+						</div>
+					</div>
+				</div>
+				<div class="item testimonial-card">
+					<main class="test-card-body">
+						<div class="quote">
+							<i class="fa fa-quote-left"></i>
+							<h2>Sound Blast</h2>
+						</div>
+						<p style="text-align: justify;">Just wanted to shout out the awesomeness of your music site! Easy to use, killer playlists,
+							and artist info on point. My musical sanctuary—thanks for the fantastic vibes!</p>
+						<div class="ratings">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+						</div>
+					</main>
+					<div class="profile">
+						<div class="profile-image">
+							<img src="ReviewImages/image5.jpg">
+						</div>
+						<div class="profile-desc">
+							<span>Ava</span>
+							<span>Listner</span>
+						</div>
+					</div>
+				</div>
+				<div class="item testimonial-card">
+					<main class="test-card-body">
+						<div class="quote">
+							<i class="fa fa-quote-left"></i>
+							<h2>Sound Blast</h2>
+						</div>
+						<p style="text-align: justify;">Your music site is my daily escape! Smooth navigation, killer playlists, and artist info on
+							point. Big thanks for the awesome vibes!</p>
+						<div class="ratings">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+						</div>
+					</main>
+					<div class="profile">
+						<div class="profile-image">
+							<img src="ReviewImages/image6.jpg">
+						</div>
+						<div class="profile-desc">
+							<span>Lucas</span>
+							<span>Listner</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="review.js"></script>
+
+	<!-- FOOTER -->
+	<div>
+		<footer class="site-footer">
+			<div>
+				<div class="row">
+					<div class="col-sm-12 col-md-6">
+						<h6>About</h6>
+						<p class="mx-2" style="text-align: justify;">
+							Sound Blast represents a new era in audio excellence. We fuse innovation with passion,
+							delivering
+							cutting-edge sound solutions that redefine how you experience music, entertainment, and
+							communication.
+							Our
+							commitment to pushing the boundaries of technology ensures that every beat, note, and sound
+							is delivered
+							with unparalleled clarity and power. Join us as we elevate your auditory world with Sound
+							Blast.</p>
+					</div>
+
+					<div class="col-6 col-md-3">
+						<h6>Categories</h6>
+						<ul class="footer-links">
+							<li><a href="about.html">About Us</a></li>
+							<li><a href="contact.html">Contact Us</a></li>
+							<li><a href="gallery.html">Gallery</a></li>
+							<li><a href="login.html">Login</a></li>
+						</ul>
+					</div>
+
+					<div class="col-6 col-md-3">
+						<h6>Quick Links</h6>
+						<ul class="footer-links">
+							<li><a href="contact.html">Feedback</a></li>
+							<li><a href="review.html">Reviews</a></li>
+							<li><a href="faq.html">F.A.Q's</a></li>
+						</ul>
+					</div>
+				</div>
+				<hr class="small">
+			</div>
+			<div>
+				<div class="row">
+					<div class="col-md-8 col-sm-6 col-12">
+						<p class="copyright-text">Copyright © 2023 All Rights</p>
+					</div>
+
+					<div class="col-md-2 col-sm-6 col-12 mt-4 mt-md-0">
+						<ul class="social-icons text-center">
+							<li><a href="https://www.facebook.com/" target="_blank"><i
+										class="fab fa-facebook-f"></i></a></li>
+							<li><a href="https://twitter.com/" target="_blank"><i
+										class="fa-brands fa-x-twitter"></i></a></li>
+							<li><a href="https://www.instagram.com/accounts/login/" target="_blank"><i
+										class="fa-brands fa-instagram"></i></a></li>
+							<li><a href="https://www.linkedin.com/login" target="_blank"><i
+										class="fab fa-linkedin-in"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+
+</html>

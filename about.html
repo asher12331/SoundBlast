@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="shortcut icon" href="HomeImages/favicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/507911540e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="footer.css">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/album/">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    <link href="/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        body {
+            background-color: black;
+        }
+
+        .hero {
+
+
+            min-height: 100vh;
+        }
+
+        i {
+            color: #dc2751;
+            font-size: 2em;
+            text-align: center;
+        }
+
+        span.num {
+            color: #ffffff;
+            display: grid;
+            place-items: center;
+            font-weight: 600;
+            font-size: 1em;
+        }
+
+        span.text {
+            color: #dc2751;
+            font-size: 1em;
+            text-align: center;
+            pad: 0.7em 0;
+            font-weight: 400;
+            line-height: 0;
+            margin-top: 8px;
+        }
+
+        /* NAVIGATION BAR */
+
+        .items-color:visited {
+            color: #ffffff;
+        }
+
+        .navbar-nav .active {
+            color: red;
+        }
+
+        .btnoutline {
+            background-color: #dc2751;
+
+        }
+
+        .btnoutline:hover {
+            background-color: #f0f0f0;
+
+        }
+
+
+        .items-color {
+            color: #f0f0f0;
+        }
+
+        .items-color:hover {
+            color: #dc2751;
+        }
+
+        .text-color {
+            color: #f0f0f0;
+        }
+
+        .navbar-toggler {
+            border: 2px solid #f0f0f0;
+        }
+
+        .logo {
+            max-width: 100px;
+            margin-left: 20px;
+        }
+
+        .marginmenu {
+            margin-left: 80px;
+        }
+
+        .menu1 {
+            margin-left: 25px;
+        }
+
+        .btnmargin {
+            margin-left: 250px;
+        }
+
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+
+        .b-example-divider {
+            width: 100%;
+            height: 3rem;
+            background-color: rgba(0, 0, 0, .1);
+            border: solid rgba(0, 0, 0, .15);
+            border-width: 1px 0;
+            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+
+        .b-example-vr {
+            flex-shrink: 0;
+            width: 1.5rem;
+            height: 100vh;
+        }
+
+        .bi {
+            vertical-align: -.125em;
+            fill: currentColor;
+        }
+
+        .nav-scroller {
+            position: relative;
+            z-index: 2;
+            height: 2.75rem;
+            overflow-y: hidden;
+        }
+
+        .nav-scroller .nav {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-bottom: 1rem;
+            margin-top: -1px;
+            overflow-x: auto;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        /* ABOUT US */
+
+        .wrapper {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 100px;
+        }
+
+        .about-container {
+            position: relative;
+            background-color: rgb(0, 0, 0);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 40px;
+            border-radius: 5px;
+        }
+
+        .image-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-container img {
+            width: 500px;
+            height: 500px;
+            margin: 20px;
+            border-radius: 10px;
+        }
+
+        .text-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            font-size: 22px;
+        }
+
+        .text-container h1 {
+            font-size: 70px;
+            padding: 20px 0px;
+        }
+
+
+
+        @media screen and (max-width: 1600px) {
+            .about-container {
+                width: 90%;
+            }
+
+            .image-container img {
+                width: 400px;
+                height: 400px;
+            }
+
+            .text-container h1 {
+                font-size: 50px;
+            }
+        }
+
+        @media screen and (max-width: 1100px) {
+            .about-container {
+                flex-direction: column;
+            }
+
+            .image-container img {
+                width: 300px;
+                height: 300px;
+            }
+
+            .text-container {
+                align-items: center;
+            }
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar bg-black navbar-expand-lg" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a href="index.html"><img src="Homeimages/logo.png" id="logo" class="logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars" style="color: #f0f0f0;"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 ">
+                    <li class="nav-item">
+                        <a class="nav-link items-color fw-semibold" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link items-color fw-semibold" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link items-color fw-semibold" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link items-color fw-semibold" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link items-color fw-semibold" href="review.html">Reviews</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link items-color fw-semibold" href="faq.html">F.A.Q's</a>
+                      </li>
+                </ul>
+
+                <!-- VISITOR COUNTER -->
+                <form class="d-flex">
+                    <div class="me-3 text-center">
+                        <i class="fa-solid fa-person fa-fade" style="color: #dc2751;"></i>
+                        <span class="num" data-val="250">250</span>
+                        <span class="text">Visitors</span>
+                    </div>
+                    <div class="my-3">
+                        <a href="login.html" class="btn btn-outline-danger" style="height: 40px;">Login</a>
+                      </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ABOUT US -->
+    <div class="hero">
+        <div class="wrapper">
+            <div class="about-container">
+                <div class="image-container">
+                    <img src="About image/about.jpg">
+                </div>
+                <div class="text-container">
+                 <h1 class="display-5 fw-bold" style="color: #dc2751;">About Us</h1>
+                    <p class="lead mb-4" style="color: #ffffff; text-align: justify;">At Sound Blast, we are a team of passionate music lovers, creators, and innovators. Our
+                        diverse backgrounds and experiences converge to form a dynamic group dedicated to curating an
+                        exceptional music experience for you. Whether you're a seasoned music veteran or a curious
+                        newcomer, we invite you to join us on this sonic journey.</p>
+                    <a href="contact.html"><button class="btn btn-outline-danger my-3"
+                            style="height: 40px,;">Contact Us</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div>
+        <footer class="site-footer">
+            <div>
+                <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                        <h6>About</h6>
+                        <p class="mx-2" style="text-align: justify;">
+                            Sound Blast represents a new era in audio excellence. We fuse innovation with passion,
+                            delivering
+                            cutting-edge sound solutions that redefine how you experience music, entertainment, and
+                            communication.
+                            Our
+                            commitment to pushing the boundaries of technology ensures that every beat, note, and sound
+                            is delivered
+                            with unparalleled clarity and power. Join us as we elevate your auditory world with Sound
+                            Blast.</p>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                        <h6>Categories</h6>
+                        <ul class="footer-links">
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li><a href="login.html">Login</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                        <h6>Quick Links</h6>
+                        <ul class="footer-links">
+                            <li><a href="contact.html">Feedback</a></li>
+                            <li><a href="review.html">Reviews</a></li>
+                            <li><a href="faq.html">F.A.Q's</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <hr class="small">
+            </div>
+            <div>
+                <div class="row">
+                    <div class="col-md-8 col-sm-6 col-12">
+                        <p class="copyright-text">Copyright © 2023 All Rights</p>
+                    </div>
+
+                    <div class="col-md-2 col-sm-6 col-12 mt-4 mt-md-0">
+                        <ul class="social-icons text-center">
+                            <li><a href="https://www.facebook.com/" target="_blank"><i
+                                        class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="https://twitter.com/" target="_blank"><i
+                                        class="fa-brands fa-x-twitter"></i></a></li>
+                            <li><a href="https://www.instagram.com/accounts/login/" target="_blank"><i
+                                        class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="https://www.linkedin.com/login" target="_blank"><i
+                                        class="fab fa-linkedin-in"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

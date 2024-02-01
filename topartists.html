@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Artists</title>
+    <link rel="shortcut icon" href="HomeImages/favicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/507911540e.js" crossorigin="anonymous"></script>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/album/">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    <link href="/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="footer.css">
+
+    <style>
+        body {
+            background-color: black;
+        }
+
+        .hero {
+
+
+            min-height: 100vh;
+        }
+
+        i {
+            color: #dc2751;
+            font-size: 2em;
+            text-align: center;
+        }
+
+        span.num {
+            color: #ffffff;
+            display: grid;
+            place-items: center;
+            font-weight: 600;
+            font-size: 1em;
+        }
+
+        span.text {
+            color: #dc2751;
+            font-size: 1em;
+            text-align: center;
+            pad: 0.7em 0;
+            font-weight: 400;
+            line-height: 0;
+            margin-top: 8px;
+        }
+
+        /* NAVIGATION BAR */
+
+        .items-color:visited {
+            color: #ffffff;
+        }
+
+        .navbar-nav .active {
+            color: red;
+        }
+
+        .btnoutline {
+            background-color: #dc2751;
+
+        }
+
+        .btnoutline:hover {
+            background-color: #f0f0f0;
+
+        }
+
+
+        .items-color {
+            color: #f0f0f0;
+        }
+
+        .items-color:hover {
+            color: #dc2751;
+        }
+
+        .text-color {
+            color: #f0f0f0;
+        }
+
+        .navbar-toggler {
+            border: 2px solid #f0f0f0;
+        }
+
+        .logo {
+            max-width: 100px;
+            margin-left: 20px;
+        }
+
+        .marginmenu {
+            margin-left: 80px;
+        }
+
+        .menu1 {
+            margin-left: 25px;
+        }
+
+        .btnmargin {
+            margin-left: 250px;
+        }
+
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+
+        .b-example-divider {
+            width: 100%;
+            height: 3rem;
+            background-color: rgba(0, 0, 0, .1);
+            border: solid rgba(0, 0, 0, .15);
+            border-width: 1px 0;
+            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+
+        .b-example-vr {
+            flex-shrink: 0;
+            width: 1.5rem;
+            height: 100vh;
+        }
+
+        .bi {
+            vertical-align: -.125em;
+            fill: currentColor;
+        }
+
+        .nav-scroller {
+            position: relative;
+            z-index: 2;
+            height: 2.75rem;
+            overflow-y: hidden;
+        }
+
+        .nav-scroller .nav {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-bottom: 1rem;
+            margin-top: -1px;
+            overflow-x: auto;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        /* TOP ARTISTS*/
+        .table>:not(caption)>*>* {
+            background-color: black;
+        }
+
+        table>tbody>tr>th>img {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar bg-black navbar-expand-lg" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a href="index.html"><img src="Homeimages/logo.png" id="logo" class="logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars" style="color: #f0f0f0;"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 ">
+                    <li class="nav-item">
+                        <a class="nav-link items-color fw-semibold" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link items-color fw-semibold" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link items-color fw-semibold" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link items-color fw-semibold" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link items-color fw-semibold" href="review.html">Reviews</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link items-color fw-semibold" href="faq.html">F.A.Q's</a>
+                    </li>
+                </ul>
+
+                <!-- VISITOR COUNTER -->
+                <form class="d-flex">
+                    <div class="me-3 text-center">
+                        <i class="fa-solid fa-person fa-fade" style="color: #dc2751;"></i>
+                        <span class="num" data-val="250">250</span>
+                        <span class="text">Visitors</span>
+                    </div>
+                    <div class="my-3">
+                        <a href="login.html" class="btn btn-outline-danger" style="height: 40px;">Login</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- TOP ARTISTS -->
+    <div class="hero">
+
+        <h1 class="display-5 fw-bold px-4 py-5 text-center" style="color:white;"><span
+                style="color: #dc2751;">TOP</span> ARTISTS</h1>
+        <table class="table table-dark text-center align-middle">
+            <tbody>
+                <tr>
+                    <div class="row">
+                        <div class="col-lg-7 px-4">
+                            <div class="row text-center">
+                                <div class="col-2">
+
+                                </div>
+                                <div class="col-10">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 px-4 mt-lg-0 mt-3 text-center">
+                            <div class="row d-none d-lg-flex">
+                                <div class="col-4" style="color: #dc2751;">Download</div>
+                                <div class="col-4" style="color: #dc2751;">
+                                    Tracks
+                                </div>
+                                <div class="col-4" style="color: #dc2751;">
+                                    Artists
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </tr>
+                <hr class="small" style="color: white;">
+
+                <tr>
+                    <div class="row tex">
+                        <div class="col-lg-7 px-4">
+                            <div class="row text-center">
+                                <div class="col-2">
+                                    <img src="Top Artists Images/moons rise.jpeg" width="40" height="40"
+                                        class="rounded float-left">
+                                </div>
+                                <div class="col-10">
+                                    <audio src="Top Artists Songs/Moonrise.mp3" controls></audio>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 px-4 mt-lg-0 mt-3 text-center">
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="text-center mb-2 d-lg-none" style="color: #dc2751;">Download</div>
+                                    <i class="fa-regular fa-circle-down" style="color: white; cursor: pointer;"></i>
+                                </div>
+                                <div class="col-4" style="color: white;">
+                                    <div class="text-center mb-2 d-lg-none" style="color: #dc2751;">
+                                        Track
+                                    </div>
+                                    Moonrise
+                                </div>
+                                <div class="col-4" style="color: white;">
+                                    <div class="text-center mb-2 d-lg-none" style="color: #dc2751;">
+                                        Artist
+                                    </div>
+                                    Atif Aslam
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </tr>
+                <hr class="small" style="color: white;">
+
+                <tr>
+                    <div class="row">
+                        <div class="col-lg-7 px-4">
+                            <div class="row text-center">
+                                <div class="col-2">
+                                    <img src="Top Artists Images/baller.jpg" width="40" height="40"
+                                        class="rounded float-left">
+                                </div>
+                                <div class="col-10">
+                                    <audio src="Top Artists Songs/Baller.mp3" controls></audio>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 px-4 mt-lg-0 mt-3 text-center">
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="text-center mb-2 d-lg-none" style="color: #dc2751;">Download</div>
+                                    <i class="fa-regular fa-circle-down" style="color: white; cursor: pointer;"></i>
+                                </div>
+                                <div class="col-4" style="color: white;">
+                                    <div class="text-center mb-2 d-lg-none" style="color: #dc2751;">
+                                        Track
+                                    </div>
+                                    Baller
+                                </div>
+                                <div class="col-4" style="color: white;">
+                                    <div class="text-center mb-2 d-lg-none" style="color: #dc2751;">
+                                        Artist
+                                    </div>
+                                    Shubh
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </tr>
+                <hr class="small" style="color: white;">
+
+                <tr>
+                    <div class="row tex">
+                        <div class="col-lg-7 px-4">
+                            <div class="row text-center">
+                                <div class="col-2">
+                                    <img src="Top Artists Images/Downers at dusk.jpg" width="40" height="40"
+                                        class="rounded float-left">
+                                </div>
+                                <div class="col-10">
+                                    <audio src="Top Artists Songs/Downers At Dusk.mp3" controls></audio>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 px-4 mt-lg-0 mt-3 text-center">
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="text-center mb-2 d-lg-none" style="color: #dc2751;">Download</div>
+                                    <i class="fa-regular fa-circle-down" style="color: white; cursor: pointer;"></i>
+                                </div>
+                                <div class="col-4" style="color: white;">
+                                    <div class="text-center mb-2 d-lg-none" style="color: #dc2751;">
+                                        Track
+                                    </div>
+                                    Downers At Dusk
+                                </div>
+                                <div class="col-4" style="color: white;">
+                                    <div class="text-center mb-2 d-lg-none" style="color: #dc2751;">
+                                        Artist
+                                    </div>
+                                    Talha Anjum
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </tr>
+                <hr class="small" style="color: white;">
+
+                <tr>
+                    <div class="row tex">
+                        <div class="col-lg-7 px-4">
+                            <div class="row text-center">
+                                <div class="col-2">
+                                    <img src="Top Artists Images/kahani suno.jpg" width="40" height="40"
+                                        class="rounded float-left">
+                                </div>
+                                <div class="col-10">
+                                    <audio src="Top Artists Songs/Kahani Suno.mp3" controls></audio>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 px-4 mt-lg-0 mt-3 text-center">
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="text-center mb-2 d-lg-none" style="color: #dc2751;">Download</div>
+                                    <i class="fa-regular fa-circle-down" style="color: white; cursor: pointer;"></i>
+                                </div>
+                                <div class="col-4" style="color: white;">
+                                    <div class="text-center mb-2 d-lg-none" style="color: #dc2751;">
+                                        Track
+                                    </div>
+                                    Kahani Suno
+                                </div>
+                                <div class="col-4" style="color: white;">
+                                    <div class="text-center mb-2 d-lg-none" style="color: #dc2751;">
+                                        Artist
+                                    </div>
+                                    Kaifi Khalil
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </tr>
+                <hr class="small" style="color: white;">
+
+                <tr>
+                    <div class="row tex">
+                        <div class="col-lg-7 px-4">
+                            <div class="row text-center">
+                                <div class="col-2">
+                                    <img src="Top Artists Images/Tu hai Kahan.jpg" width="40" height="40"
+                                        class="rounded float-left">
+                                </div>
+                                <div class="col-10">
+                                    <audio src="Top Artists Songs/TU HAI KAHAN.mp3" controls></audio>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 px-4 mt-lg-0 mt-3 text-center">
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="text-center mb-2 d-lg-none" style="color: #dc2751;">Download</div>
+                                    <i class="fa-regular fa-circle-down" style="color: white; cursor: pointer;"></i>
+                                </div>
+                                <div class="col-4" style="color: white;">
+                                    <div class="text-center mb-2 d-lg-none" style="color: #dc2751;">
+                                        Track
+                                    </div>
+                                    Tu Hai Kahan
+                                </div>
+                                <div class="col-4" style="color: white;">
+                                    <div class="text-center mb-2 d-lg-none" style="color: #dc2751;">
+                                        Artist
+                                    </div>
+                                    AUR
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </tr>
+                <hr class="small" style="color: white;">
+
+                <tr>
+                    <div class="row tex">
+                        <div class="col-lg-7 px-4">
+                            <div class="row text-center">
+                                <div class="col-2">
+                                    <img src="Top Artists Images/ghlt fehmi.jpeg" width="40" height="40"
+                                        class="rounded float-left">
+                                </div>
+                                <div class="col-10">
+                                    <audio src="Top Artists Songs/Ghalat Fehmi.mp3" controls></audio>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 px-4 mt-lg-0 mt-3 text-center">
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="text-center mb-2 d-lg-none" style="color: #dc2751;">Download</div>
+                                    <i class="fa-regular fa-circle-down" style="color: white; cursor: pointer;"></i>
+                                </div>
+                                <div class="col-4" style="color: white;">
+                                    <div class="text-center mb-2 d-lg-none" style="color: #dc2751;">
+                                        Track
+                                    </div>
+                                    Ghalat Fehmi
+                                </div>
+                                <div class="col-4" style="color: white;">
+                                    <div class="text-center mb-2 d-lg-none" style="color: #dc2751;">
+                                        Artist
+                                    </div>
+                                    Asim Azhar
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </tr>
+                <hr class="small" style="color: white;">
+
+                <tr>
+                    <div class="row tex">
+                        <div class="col-lg-7 px-4">
+                            <div class="row text-center">
+                                <div class="col-2">
+                                    <img src="Top Artists Images/bikhra.jpg" width="40" height="40"
+                                        class="rounded float-left">
+                                </div>
+                                <div class="col-10">
+                                    <audio src="Top Artists Songs/Bikhra.mp3" controls></audio>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 px-4 mt-lg-0 mt-3 text-center">
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="text-center mb-2 d-lg-none" style="color: #dc2751;">Download</div>
+                                    <i class="fa-regular fa-circle-down" style="color: white; cursor: pointer;"></i>
+                                </div>
+                                <div class="col-4" style="color: white;">
+                                    <div class="text-center mb-2 d-lg-none" style="color: #dc2751;">
+                                        Track
+                                    </div>
+                                    Bikhra
+                                </div>
+                                <div class="col-4" style="color: white;">
+                                    <div class="text-center mb-2 d-lg-none" style="color: #dc2751;">
+                                        Artist
+                                    </div>
+                                    Abdul Hannan
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </tr>
+                <hr class="small" style="color: white;">
+
+                <tr>
+                    <div class="row tex">
+                        <div class="col-lg-7 px-4">
+                            <div class="row text-center">
+                                <div class="col-2">
+                                    <img src="Top Artists Images/Chaleya.jpg" width="40" height="40"
+                                        class="rounded float-left">
+                                </div>
+                                <div class="col-10">
+                                    <audio src="Top Artists Songs/Chaleya.mp3" controls></audio>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 px-4 mt-lg-0 mt-3 text-center">
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="text-center mb-2 d-lg-none" style="color: #dc2751;">Download</div>
+                                    <i class="fa-regular fa-circle-down" style="color: white; cursor: pointer;"></i>
+                                </div>
+                                <div class="col-4" style="color: white;">
+                                    <div class="text-center mb-2 d-lg-none" style="color: #dc2751;">
+                                        Track
+                                    </div>
+                                    Chaleya
+                                </div>
+                                <div class="col-4" style="color: white;">
+                                    <div class="text-center mb-2 d-lg-none" style="color: #dc2751;">
+                                        Artist
+                                    </div>
+                                    Arijit Singh
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </tr>
+                <hr class="small" style="color: white;">
+
+                <tr>
+                    <div class="row tex">
+                        <div class="col-lg-7 px-4">
+                            <div class="row text-center">
+                                <div class="col-2">
+                                    <img src="Top Artists Images/brown munde.jpeg" width="40" height="40"
+                                        class="rounded float-left">
+                                </div>
+                                <div class="col-10">
+                                    <audio src="Top Artists Songs/BROWN MUNDE.mp3" controls></audio>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 px-4 mt-lg-0 mt-3 text-center">
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="text-center mb-2 d-lg-none" style="color: #dc2751;">Download</div>
+                                    <i class="fa-regular fa-circle-down" style="color: white; cursor: pointer;"></i>
+                                </div>
+                                <div class="col-4" style="color: white;">
+                                    <div class="text-center mb-2 d-lg-none" style="color: #dc2751;">
+                                        Track
+                                    </div>
+                                    Brown Munde
+                                </div>
+                                <div class="col-4" style="color: white;">
+                                    <div class="text-center mb-2 d-lg-none" style="color: #dc2751;">
+                                        Artist
+                                    </div>
+                                    AP Dhillon
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </tr>
+                <hr class="small" style="color: white;">
+
+                <tr>
+                    <div class="row tex">
+                        <div class="col-lg-7 px-4">
+                            <div class="row text-center">
+                                <div class="col-2">
+                                    <img src="Top Artists Images/295.jpg" width="40" height="40"
+                                        class="rounded float-left">
+                                </div>
+                                <div class="col-10">
+                                    <audio src="Top Artists Songs/295.mp3"
+                                        controls></audio>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 px-4 mt-lg-0 mt-3 text-center">
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="text-center mb-2 d-lg-none" style="color: #dc2751;">Download</div>
+                                    <i class="fa-regular fa-circle-down" style="color: white; cursor: pointer;"></i>
+                                </div>
+                                <div class="col-4" style="color: white;">
+                                    <div class="text-center mb-2 d-lg-none" style="color: #dc2751;">
+                                        Track
+                                    </div>
+                                    295
+                                </div>
+                                <div class="col-4" style="color: white;">
+                                    <div class="text-center mb-2 d-lg-none" style="color: #dc2751;">
+                                        Artist
+                                    </div>
+                                    Sidhu Moose Wala
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </tr>
+                <hr class="small" style="color: white;">
+
+            </tbody>
+
+        </table>
+    </div>
+
+    <!-- FOOTER -->
+    <div>
+        <footer class="site-footer">
+            <div>
+                <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                        <h6>About</h6>
+                        <p class="mx-2" style="text-align: justify;">
+                            Sound Blast represents a new era in audio excellence. We fuse innovation with passion,
+                            delivering
+                            cutting-edge sound solutions that redefine how you experience music, entertainment, and
+                            communication.
+                            Our
+                            commitment to pushing the boundaries of technology ensures that every beat, note, and sound
+                            is delivered
+                            with unparalleled clarity and power. Join us as we elevate your auditory world with Sound
+                            Blast.</p>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                        <h6>Categories</h6>
+                        <ul class="footer-links">
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li><a href="login.html">Login</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                        <h6>Quick Links</h6>
+                        <ul class="footer-links">
+                            <li><a href="contact.html">Feedback</a></li>
+                            <li><a href="review.html">Reviews</a></li>
+                            <li><a href="faq.html">F.A.Q's</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <hr class="small">
+            </div>
+            <div>
+                <div class="row">
+                    <div class="col-md-8 col-sm-6 col-12">
+                        <p class="copyright-text">Copyright © 2023 All Rights</p>
+                    </div>
+
+                    <div class="col-md-2 col-sm-6 col-12 mt-4 mt-md-0">
+                        <ul class="social-icons text-center">
+                            <li><a href="https://www.facebook.com/" target="_blank"><i
+                                        class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="https://twitter.com/" target="_blank"><i
+                                        class="fa-brands fa-x-twitter"></i></a></li>
+                            <li><a href="https://www.instagram.com/accounts/login/" target="_blank"><i
+                                        class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="https://www.linkedin.com/login" target="_blank"><i
+                                        class="fab fa-linkedin-in"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
